@@ -1,0 +1,10 @@
+class Solution:
+    def removeDuplicates(self, nums: List[int]) -> int:
+        if not nums:
+            return 0        
+        unique_ptr = 0        
+        for num in nums:
+            if num != nums[unique_ptr]:
+                unique_ptr += 1
+                nums[unique_ptr] = num        
+        return unique_ptr + 1
